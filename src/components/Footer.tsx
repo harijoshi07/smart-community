@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Container from './ui/Container';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Logo from './ui/Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,11 +13,8 @@ const Footer = () => {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="text-foreground font-semibold text-xl inline-block mb-4">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-                Smart
-              </span>
-              Community
+            <Link to="/" className="inline-block mb-4">
+              <Logo />
             </Link>
             <p className="text-muted-foreground max-w-md">
               Educating and empowering DMAT account holders in Nepal about financial literacy, 
