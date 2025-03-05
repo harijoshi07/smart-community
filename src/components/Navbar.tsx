@@ -1,9 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import Container from './ui/Container';
 import { Menu, X } from 'lucide-react';
-import Logo from './ui/Logo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,9 +45,12 @@ const Navbar = () => {
         <nav className="flex items-center justify-between">
           <Link 
             to="/" 
-            className="relative z-10"
+            className="text-foreground font-semibold text-xl relative z-10"
           >
-            <Logo />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+              Smart
+            </span>
+            Community
           </Link>
 
           {/* Desktop Navigation */}
