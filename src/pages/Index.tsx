@@ -4,7 +4,7 @@ import Hero from '@/components/hero/Hero';
 import Section from '@/components/ui/Section';
 import Container from '@/components/ui/Container';
 import FeatureCard from '@/components/features/FeatureCard';
-import { BookOpen, TrendingUp, Users, Calendar, ArrowRight } from 'lucide-react';
+import { BookOpen, TrendingUp, Users, Calendar, ArrowRight } from 'lucide-react'; // Added ArrowRight import
 import Button from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
 
