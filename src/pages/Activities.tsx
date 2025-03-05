@@ -3,6 +3,7 @@ import Section from '@/components/ui/Section';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { Calendar, Clock, MapPin, Users, Filter, AlertCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Sample events
 const events = [
@@ -235,7 +236,9 @@ const Activities = () => {
                 We're always looking for financial experts to lead workshops, webinars, and seminars. 
                 If you have knowledge to share, we'd love to collaborate with you on a SmartCommunity event.
               </p>
-              <Button as="a" href="/contact">Get in Touch</Button>
+              <Link to="/contact">
+                <Button>Get in Touch</Button>
+              </Link>
             </div>
             <div className="rounded-lg overflow-hidden shadow-elevation">
               <div className="aspect-w-16 aspect-h-9 bg-muted">

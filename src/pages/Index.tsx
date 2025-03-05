@@ -4,7 +4,7 @@ import Hero from '@/components/hero/Hero';
 import Section from '@/components/ui/Section';
 import Container from '@/components/ui/Container';
 import FeatureCard from '@/components/features/FeatureCard';
-import { BookOpen, TrendingUp, Users, Calendar } from 'lucide-react';
+import { BookOpen, TrendingUp, Users, Calendar, ArrowRight } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
 
@@ -63,9 +63,11 @@ const Index = () => {
                 Through education, community building, and practical resources, we aim to transform 
                 the financial landscape of Nepal, one investor at a time.
               </p>
-              <Button as={Link} to="/about">
-                Learn More About Us
-              </Button>
+              <Link to="/about">
+                <Button>
+                  Learn More About Us
+                </Button>
+              </Link>
             </div>
             <div className="rounded-lg overflow-hidden shadow-elevation">
               <div className="aspect-w-16 aspect-h-9 bg-muted animate-pulse">
@@ -130,9 +132,11 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-10">
-            <Button variant="outline" as={Link} to="/blog">
-              View All Articles
-            </Button>
+            <Link to="/blog">
+              <Button variant="outline">
+                View All Articles
+              </Button>
+            </Link>
           </div>
         </Container>
       </Section>
@@ -146,12 +150,16 @@ const Index = () => {
               Join our community today and take the first step towards financial literacy and successful investing.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" as={Link} to="/contact">
-                Join Our Community
-              </Button>
-              <Button variant="outline" size="lg" as={Link} to="/activities">
-                Explore Our Activities
-              </Button>
+              <Link to="/contact">
+                <Button size="lg">
+                  Join Our Community
+                </Button>
+              </Link>
+              <Link to="/activities">
+                <Button variant="outline" size="lg">
+                  Explore Our Activities
+                </Button>
+              </Link>
             </div>
           </div>
         </Container>

@@ -41,13 +41,17 @@ const Hero = ({ className }: HeroProps) => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <Button size="lg" as={Link} to="/about">
-              Learn More
-            </Button>
-            <Button variant="outline" size="lg" as={Link} to="/blog">
-              Read Our Blog
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link to="/about">
+              <Button size="lg">
+                Learn More
+              </Button>
+            </Link>
+            <Link to="/blog">
+              <Button variant="outline" size="lg">
+                Read Our Blog
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </Container>

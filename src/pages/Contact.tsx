@@ -1,10 +1,10 @@
-
 import React, { useState } from 'react';
 import Section from '@/components/ui/Section';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
-import { Mail, Phone, MapPin, Send, Check, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Check } from 'lucide-react';
 import { toast } from "@/hooks/use-toast";
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +21,6 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     
-    // Clear error when user types
     if (errors[name]) {
       setErrors((prev) => {
         const newErrors = { ...prev };
@@ -64,7 +63,6 @@ const Contact = () => {
     if (validateForm()) {
       setIsSubmitting(true);
       
-      // Simulate form submission
       setTimeout(() => {
         setIsSubmitting(false);
         setFormSubmitted(true);
@@ -73,7 +71,6 @@ const Contact = () => {
           description: "We'll get back to you soon.",
           variant: "default",
         });
-        // Reset form
         setFormData({
           name: '',
           email: '',
@@ -86,7 +83,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-24">
-      {/* Contact Header */}
       <Section className="pt-10">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
@@ -98,7 +94,6 @@ const Contact = () => {
         </Container>
       </Section>
 
-      {/* Contact Information */}
       <Section>
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -126,7 +121,6 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
               
@@ -252,7 +246,6 @@ const Contact = () => {
               )}
             </div>
 
-            {/* FAQ Section */}
             <div>
               <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
               <div className="space-y-6">
@@ -282,7 +275,6 @@ const Contact = () => {
         </Container>
       </Section>
 
-      {/* Community Section */}
       <Section className="bg-gradient-to-r from-primary/10 to-accent">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
