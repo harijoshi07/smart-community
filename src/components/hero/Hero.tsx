@@ -29,10 +29,10 @@ const Hero = ({ className }: HeroProps) => {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 animate-fade-in text-balance" style={{ animationDelay: '0.2s' }}>
             <span>LEARN, </span>
-            <span className="text-primary">eARN</span>
+            <span className="text-primary">EARN</span>
             <span> & </span>
-            <span className="text-primary">gROW</span>
-            <span> tOGETHER</span>
+            <span className="text-primary">GROW</span>
+            <span> together</span>
           </h1>
 
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in text-balance" style={{ animationDelay: '0.4s' }}>
